@@ -1,12 +1,40 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <script>
+            function saludar(){
+                console.log("Hola");
+            }
+            function CambioTexto(e){
+                if (e.key === "Enter"){
+                    e.preventDefault();
+                    console.log("Hola " + document.getElementById("texto").value);
+                }
+            }
+            function validar(){
+                let valor = document.getElementById("texto2").value;
+                if (valor === ""){
+                    console.log("Texto vacio");
+                    document.getElementById("valTexto2").style.display = "";
+                } else {
+                    document.getElementById("valTexto2").style.display = "none";
+                }
+            }
+        </script>
+    </head>
     <body>
         <h1>Hola Mundo</h1>
-        <p id="mdg"></p>
+        <p id="msg"></p>
         <select name="comuna" id="com"></select>
         <script>
             console.log("Empezo el código")
-            document.getElementById("id").innerText = "Hola";
+            document.getElementById("msg").innerText = "Hola";
+            document.getElementById("com").innerHTML = '<option value="1">Santiago</option><option value="2">Talca</option>';
         </script>
-    </body>
+        <button type="button" onclick="alert('click');">Evento</button>
+        <button type="button" onclick="console.log('click');">Evento2</button>
+        <button type="button" onclick="window.print()">Imprimir</button>
+        <button type="button" onclick="saludar();">Saludo</button>
+        <input type="text" id="texto" onkeydown="CambioTexto(event);"/>
+        <input type="text" id="texto2" onblur="validar();" /><span id="valTexto2" style="display:none; color: red">Debe Ingresar un Texto</span>
 </html>
