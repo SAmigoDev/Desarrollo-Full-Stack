@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Dulce Hogar Panadería Artesanal</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans : 400,600,300"> <!-- Importación de tipografía "Open Sans" -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"> <!-- CSS de Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> <!-- JS de Bootstrap -->
+    </head>
+    <body>
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Dulce Hogar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Nosotros</a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item" href="#">Link</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">aaaa</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">A third link</a>
+                    </li>
+                </ul>
+                </li>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Productos</a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item" href="productos.html">Panadería</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="productos.html">Pastelería</a>
+                    </li>
+                </ul>
+                </li>                                
+                <li class="nav-item">
+                <a class="nav-link" href="#">Zona de Cobertura</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#m1">Pide Aquí</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-warning btn-sm ms-2 text-dark" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        <i class="fas fa-user me-1"></i>Iniciar Sesión
+                    </a>
+                </li>
+            </ul>
+            </div>
+        </div>
+        </nav>
+        <!-- Contenido Principal -->
+        <div class="container my-5 py-5">
+            <div class="row">
+                <div class="col-md-8 mx-auto text-center">
+                    <h1 class="display-4 fw-bold text-white text-shadow">Dulce Hogar</h1>
+                    <p class="lead text-white text-shadow">Panadería Artesanal con el sabor de siempre</p>
+                    <button class="btn btn-warning btn-lg mt-3" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        <i class="fas fa-sign-in-alt me-2"></i>Iniciar Sesión para Pedir <!--Pestaña para Iniciar sesión-->
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Modal1-->
+        <div class="modal fade" id="m1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Inicie Sesión</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body">
+                Modal body..
+            </div>
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+            </div>
+        </div>
+        </div>
+
+    <!-- Modal de Login -->
+        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="login-header">
+                        <h4 class="modal-title" id="loginModalLabel">Iniciar Sesión</h4>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="login-form">
+                        <form id="loginForm">
+                            <div class="mb-3">
+                                <label for="loginEmail" class="form-label">Correo electrónico</label>
+                                <input type="email" class="form-control" id="loginEmail" placeholder="tu@email.com" required>
+                                <div class="invalid-feedback">Por favor ingresa un correo electrónico válido</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="loginPassword" class="form-label">Contraseña</label>
+                                <div class="input-group">
+                                    <input type="password" class="form-control" id="loginPassword" placeholder="Ingresa tu contraseña" required>
+                                    <span class="password-toggle" onclick="togglePassword('loginPassword')">
+                                        <i class="far fa-eye"></i>
+                                    </span>
+                                </div>
+                                <div class="invalid-feedback">La contraseña es requerida</div>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="rememberMe">
+                                <label class="form-check-label" for="rememberMe">Recordarme</label>
+                                <a href="#" class="float-end text-decoration-none">¿Olvidaste tu contraseña?</a>
+                            </div>
+                            <button type="submit" class="btn btn-login mb-3">Iniciar Sesión</button>
+                            
+                            <div class="divider">
+                                <span>o inicia sesión con</span>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-6">
+                                    <button type="button" class="btn social-btn btn-google">
+                                        <i class="fab fa-google me-2"></i>Google
+                                    </button>
+                                </div>
+                                <div class="col-6">
+                                    <button type="button" class="btn social-btn btn-facebook">
+                                        <i class="fab fa-facebook-f me-2"></i>Facebook
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer justify-content-center">
+                        <p>¿No tienes una cuenta? <a href="#" class="register-link" data-bs-target="#registerModal" data-bs-toggle="modal" data-bs-dismiss="modal">Regístrate aquí</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- Modal de Registro -->
+        <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="login-header">
+                        <h5 class="modal-title" id="registerModalLabel">Crear Cuenta</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="login-form">
+                        <form id="registerForm">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="firstName" class="form-label">Nombre</label>
+                                    <input type="text" class="form-control" id="firstName" placeholder="Tu nombre" required>
+                                    <div class="invalid-feedback">Por favor ingresa tu nombre</div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="lastName" class="form-label">Apellido</label>
+                                    <input type="text" class="form-control" id="lastName" placeholder="Tu apellido" required>
+                                    <div class="invalid-feedback">Por favor ingresa tu apellido</div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="registerEmail" class="form-label">Correo electrónico</label>
+                                <input type="email" class="form-control" id="registerEmail" placeholder="tu@email.com" required>
+                                <div class="invalid-feedback">Por favor ingresa un correo electrónico válido</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="registerPassword" class="form-label">Contraseña</label>
+                                <div class="input-group">
+                                    <input type="password" class="form-control" id="registerPassword" placeholder="Crea una contraseña segura" required>
+                                    <span class="password-toggle" onclick="togglePassword('registerPassword')">
+                                        <i class="far fa-eye"></i>
+                                    </span>
+                                </div>
+                                <div class="form-text">La contraseña debe tener al menos 8 caracteres, incluir una mayúscula y un número</div>
+                                <div class="invalid-feedback">La contraseña no cumple con los requisitos</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="confirmPassword" class="form-label">Confirmar Contraseña</label>
+                                <div class="input-group">
+                                    <input type="password" class="form-control" id="confirmPassword" placeholder="Repite tu contraseña" required>
+                                    <span class="password-toggle" onclick="togglePassword('confirmPassword')">
+                                        <i class="far fa-eye"></i>
+                                    </span>
+                                </div>
+                                <div class="invalid-feedback">Las contraseñas no coinciden</div>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="termsAgree" required>
+                                <label class="form-check-label" for="termsAgree">Acepto los <a href="#" class="register-link">términos y condiciones</a> y la <a href="#" class="register-link">política de privacidad</a></label>
+                                <div class="invalid-feedback">Debes aceptar los términos y condiciones</div>
+                            </div>
+                            <button type="submit" class="btn btn-login mb-3">Crear Cuenta</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer justify-content-center">
+                        <p>¿Ya tienes una cuenta? <a href="#" class="register-link" data-bs-target="#loginModal" data-bs-toggle="modal" data-bs-dismiss="modal">Inicia sesión aquí</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
