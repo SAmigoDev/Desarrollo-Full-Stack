@@ -24,17 +24,33 @@
     </head>
     <body>
         <h1>Hola Mundo</h1>
+        <h2>Demo JavaScript in Body</h2>
+        <p id="demo">A Paragraph</p>
+        <button type="button" onclick="myFunction()">Try it</button>
+
+        <script>
+        function myFunction() {
+        document.getElementById("demo").innerHTML = "Paragraph changed.";
+        }
+        </script>
+
         <p id="msg"></p>
         <select name="comuna" id="com"></select>
+
         <script>
             console.log("Empezo el código")
             document.getElementById("msg").innerText = "Hola";
             document.getElementById("com").innerHTML = '<option value="1">Santiago</option><option value="2">Talca</option>';
         </script>
+
         <button type="button" onclick="alert('click');">Evento</button>
         <button type="button" onclick="console.log('click');">Evento2</button>
         <button type="button" onclick="window.print()">Imprimir</button>
         <button type="button" onclick="saludar();">Saludo</button>
+        <button onclick="document.getElementById('demo').innerHTML = Date()">The time is?</button>
+        <button onclick="displayDate()">The time is?v2</button>
+
         <input type="text" id="texto" onkeydown="CambioTexto(event);"/>
         <input type="text" id="texto2" onblur="validar();" /><span id="valTexto2" style="display:none; color: red">Debe Ingresar un Texto</span>
+    </body>
 </html>
